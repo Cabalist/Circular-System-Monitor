@@ -18,41 +18,37 @@ In your Geektool folder, open the folder "Glet" and activate the ones you're int
   
 Refer to the following to install the geeklets in the correct order and place them where they need to be.  
 
-TIME glet (first number for x, second for y): -2, 60
-
-DATE glet (first number for x, second for y): 10, 175
-
-WEATHER ICON glet (first number for x, second for y): 30, 217
-
-OPENWEATHER glet: 6, 231
-
-WEATHERICONDOWN:  wherever
-
-SYSTEM arc glets from left to right (first number for x, second for y): Discarc: -8, 354 / Freeramarc: 80, 354 / Cpuarc: 175, 354 / Battarc: 256, 354)
-
-SYSTEM value gets from left to right (first number for x, second for y): Diskvalue: 35, 387 / Ramvalue: 91, 387 / Cpuvalue: 179, 387 / Batteryvalue: 267, 387)
-
-Freeramtext glet: 113 372
-
-OASALL: wherever
-
-Battvalue2: wherever
-
-
-Now, in shorter form for the Trafficarcs and values (left to right, Y is the same)   
-X: Lanuparc -3, Landownarc 67, Wlandownarc 158 , Wlanuparc 229 / Y for all of them: :498  
-X: Lanupvalue 8 Landownvalue 77 Wlandownvalue 170  Wlanupvalue 238 /Y for all: 524  
-Traffictoram: wherever  
-
-IPLan 14 577  
-IPWlan 165 577  
-
-Topramcpu 6 634  
-
-Icons 0 0  
-
-http://www.gentleface.com/free_icon_set.html  
-
+Name|x|y
+---|---|---
+TIME|-2|60
+DATE|10|175
+WEATHER ICON|30|217
+OPENWEATHER|6|231
+WEATHERICONDOWN||
+Discarc|-8|354
+Freeramarc|80|354
+Cpuarc|175|354
+Battarc|256|354
+Diskvalue|35|387
+Ramvalue|91|387
+Cpuvalue|179|387
+Batteryvalue|267|387
+Freeramtext|113|372
+OASALL||
+Battvalue2||
+Lanuparc|-3|498
+Landownarc|67|498
+Wlandownarc|158|498
+Wlanuparc|229|498
+Lanupvalue|8|524
+Landownvalue|77|524
+Wlandownvalue|170|524
+Wlanupvalue|238|524
+Traffictoram||
+IPLan|14|577  
+IPWlan|165|577  
+Topramcpu|6|634  
+Icons|0|0
 
 
 ##ADDITIONAL STEPS / ADAPT GEEKLETS:
