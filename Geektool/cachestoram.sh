@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #creates ramdisk with the size of 536MB. Adapt it to your liking
 RD=ramdisk
 if [ ! -e "/Volumes/$RD" ];  then

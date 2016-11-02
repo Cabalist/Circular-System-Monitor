@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 APPID="d4136a2afe10824aad3e79e7d228f941&"
 CITY="Ambleve"
 W=`curl -s "http://api.openweathermap.org/data/2.5/weather?units=metric&q="$CITY"&APPID="$APPID`
