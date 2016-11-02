@@ -5,30 +5,72 @@ Circular System Monitor Disk Ram Cpu Battery Nettraffic
 
 ##PREPARATIONS
 
-1. Install font Arcdopi04.ttf
+1. Install the included font `Arcdopi04.ttf`
 2. This shouldn't be necessary I think,  but In case of problems, make all the sh scripts executable.
-3. Open "cachestoram.sh" with an editor and adapt the path to your "Geektool" folder. Read my comments in the sh file.
-4. Open "Start.scpt" with ScriptEditor and again, adapt the path to your "Geektool" folder.   
-**IMPORTANT**: Export this file as an app: "Save As..." from the file menu in AppleScript Editor and set the "File Format" to application. Remember the path. This creates an app called "Start".
+3. Open `cachestoram.sh` with an editor and adapt the path to your "Geektool" folder. Read my comments in the sh file.
+4. Open `Start.applescript` with ScriptEditor and again, adapt the path to your "Geektool" folder.   
+    **IMPORTANT**: Export this file as an app: "Save As..." from the file menu in AppleScript Editor and set the "File Format" to application. Remember the path. This creates an app called "Start".
 5. Add "Start" to your login items.  Instructions can be found here: http://www.howtogeek.com/206178/mac-os-x-change-which-apps-start-automatically-at-login/
 6. Logout or reboot to check that ramdisk gets created and populated with the files from your Geektools folder.
 
 ##SETTING UP GEEKTOOL
-In your Geektool folder, open the folder "Glet" and activate the ones you're interested in. You may want to read the file "Posotionsarcs" to install the geeklets in the correct order and place them where they need to be. This is also useful when things get messed up.
+In your Geektool folder, open the folder "Glet" and activate the ones you're interested in.
+  
+Refer to the following to install the geeklets in the correct order and place them where they need to be.  
+
+TIME glet (first number for x, second for y): -2, 60
+
+DATE glet (first number for x, second for y): 10, 175
+
+WEATHER ICON glet (first number for x, second for y): 30, 217
+
+OPENWEATHER glet: 6, 231
+
+WEATHERICONDOWN:  wherever
+
+SYSTEM arc glets from left to right (first number for x, second for y): Discarc: -8, 354 / Freeramarc: 80, 354 / Cpuarc: 175, 354 / Battarc: 256, 354)
+
+SYSTEM value gets from left to right (first number for x, second for y): Diskvalue: 35, 387 / Ramvalue: 91, 387 / Cpuvalue: 179, 387 / Batteryvalue: 267, 387)
+
+Freeramtext glet: 113 372
+
+OASALL: wherever
+
+Battvalue2: wherever
+
+
+Now, in shorter form for the Trafficarcs and values (left to right, Y is the same)   
+X: Lanuparc -3, Landownarc 67, Wlandownarc 158 , Wlanuparc 229 / Y for all of them: :498  
+X: Lanupvalue 8 Landownvalue 77 Wlandownvalue 170  Wlanupvalue 238 /Y for all: 524  
+Traffictoram: wherever  
+
+IPLan 14 577  
+IPWlan 165 577  
+
+Topramcpu 6 634  
+
+Icons 0 0  
+
+http://www.gentleface.com/free_icon_set.html  
+
+
 
 ##ADDITIONAL STEPS / ADAPT GEEKLETS:
-A) Openweather: This geeklet requires some additional work: 
-1. Install "homebrew". Instructions can be found here: https://coolestguidesontheplanet.com/installing-homebrew-on-os-x-el-capitan-10-11-package-manager-for-unix-apps/
-2. Once this is done, open the terminal using  "brew install jq"
-3. Downlod and extract / open  "city.list.json" from http://bulk.openweathermap.org/sample/ to find your location. Copy your location name. Open the folder "Weather" in your Geektool folder and replace my location (the location name after CITY; in my case "Ambleve") with yours in the two sh scripts (weather.sh / weather2.sh). You may also want to change Celsius to Fahrenheit and of course replace the name of my location (AMEL) with yours.
-4. **IMPORTANT**: Fetching your weather icon does not work from whithin geektool. I don't know why. Everything works fine when running weather2.sh manually from a terminal before starting geektool. Here is a workaround:
-Open a terminal and insert the following code:
-nano .bash_profile
-In that file we need:
-alias weather='sh /Volumes/ramdisk/Geektool/Weather/weather2.sh'
+####Openweather: This geeklet requires some additional work:   
+1. Install "homebrew". Instructions can be found here: http://brew.sh/ 
+2. Once this is done, open the terminal using  "brew install jq"  
+3. Download and extract / open  "city.list.json" from http://bulk.openweathermap.org/sample/ to find your location. Copy your location name. 
+   Open the folder "Weather" in your Geektool folder and replace my location (the location name after CITY; in my case "Ambleve") with yours in the two sh scripts (weather.sh / weather2.sh). 
+   You may also want to change Celsius to Fahrenheit and of course replace the name of my location (AMEL) with yours.  
+4. **IMPORTANT**: Fetching your weather icon does not work from within geektool. I don't know why. 
+   Everything works fine when running weather2.sh manually from a terminal before starting geektool. Here is a workaround:    
+    Open a terminal and insert the following code:  
+    nano .bash_profile  
+    In that file we need:  
+    alias weather='sh /Volumes/ramdisk/Geektool/Weather/weather2.sh'  
 
-B) Network traffic geeklets
-To be honest, monitoring download / upload speeds with an arc doesn't make much sense, because it's hard to tell which data transfer rate represents 100% of your bandwidth but arcs look nice!!! That's why you have to adapt a specific divider to your needs in Landownarc, Lanuparc, Wlandownarc Wlanuparc.   
+####Network traffic geeklets  
+To be honest, monitoring download / upload speeds with an arc doesn't make much sense, because it's hard to tell which data transfer rate represents 100% of your bandwidth but arcs look nice!!! That's why you have to adapt a specific divider to your needs in Landownarc, Lanuparc, Wlandownarc Wlanuparc.     
 
 Let me explain: The first few lines for Landownarc look like this: 
 ```
