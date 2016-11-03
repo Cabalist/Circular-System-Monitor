@@ -60,10 +60,11 @@ Icons|0|0
    You may also want to change Celsius to Fahrenheit and of course replace the name of my location (AMEL) with yours.  
 4. **IMPORTANT**: Fetching your weather icon does not work from within geektool. I don't know why. 
    Everything works fine when running weather2.sh manually from a terminal before starting geektool. Here is a workaround:    
-    Open a terminal and insert the following code:  
-    nano .bash_profile  
-    In that file we need:  
-    alias weather='sh /Volumes/ramdisk/Geektool/Weather/weather2.sh'  
+    Open a terminal and enter the following command: 
+    ```
+    echo "alias weather='sh /Volumes/ramdisk/Geektool/Weather/weather2.sh'" >> ~/.bash_profile
+    ```
+ 
 
 ####Network traffic geeklets  
 To be honest, monitoring download / upload speeds with an arc doesn't make much sense, because it's hard to tell which data transfer rate represents 100% of your bandwidth but arcs look nice!!! That's why you have to adapt a specific divider to your needs in Landownarc, Lanuparc, Wlandownarc Wlanuparc.     
