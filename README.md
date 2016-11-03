@@ -18,7 +18,7 @@ In your Geektool folder, open the folder "Glet" and activate the ones you're int
   
 Refer to the following to install the geeklets in the correct order and place them where they need to be.  
 
-Name|x|y
+Glet Name|x|y
 ---|---|---
 TIME|-2|60
 DATE|10|175
