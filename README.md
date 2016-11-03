@@ -61,6 +61,7 @@ Icons|0|0
 4. **IMPORTANT**: Fetching your weather icon does not work from within geektool. I don't know why. 
    Everything works fine when running weather2.sh manually from a terminal before starting geektool. Here is a workaround:    
     Open a terminal and enter the following command: 
+    
     ```
     echo "alias weather='sh /Volumes/ramdisk/Geektool/Weather/weather2.sh'" >> ~/.bash_profile
     ```
